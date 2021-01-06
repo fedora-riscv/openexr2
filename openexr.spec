@@ -108,9 +108,9 @@ Summary:        Development files for %{name}
 
 
 %check
-# Test 4 currently fails on aarch64
+# Test 4 currently fails on aarch64 and sometimes times out on armv7hl
 # https://github.com/AcademySoftwareFoundation/openexr/issues/876
-%ifnarch aarch64 s390x
+%ifnarch armv7hl aarch64 s390x
 %ctest
 %endif
 
