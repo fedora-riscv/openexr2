@@ -2,7 +2,7 @@
 %global sover 25
 
 Name:           openexr
-Version:        2.5.3
+Version:        2.5.4
 Release:        1%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
@@ -142,5 +142,8 @@ Summary:        Development files for %{name}
 
 
 %changelog
+* Wed Jan 06 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.4-1
+- Update to 2.5.4.
+
 * Wed Dec  9 2020 Richard Shaw <hobbes1069@gmail.com> - 2.5.3-1
 - Repackaged due to massive changes in build system and inclusion of IlmBase.
