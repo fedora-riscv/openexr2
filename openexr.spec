@@ -3,7 +3,7 @@
 
 Name:           openexr
 Version:        2.5.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -17,6 +17,9 @@ BuildRequires:  boost-devel
 BuildRequires:  python%{python3_pkgversion}-devel
 BuildRequires:  zlib-devel
 
+Obsoletes:      OpenEXR < 2.5.3
+Provides:       OpenEXR = %{version}-%{release}
+
 %description
 OpenEXR is an open-source high-dynamic-range floating-point image file format
 for high-quality image processing and storage. This document presents a brief
@@ -27,8 +30,8 @@ This package containes the binaries for OpenEXR.
 
 %package libs
 Summary:        OpenEXR Libraries
-Provides:       OpenEXR-libs%{?isa} = %{version}-%{release}
-Obsoletes:      OpenEXR-libs%{?isa} < 2.5.3
+Provides:       OpenEXR-libs = %{version}-%{release}
+Obsoletes:      OpenEXR-libs < 2.5.3
 
 %description libs
 OpenEXR is an open-source high-dynamic-range floating-point image file format
@@ -142,6 +145,9 @@ Summary:        Development files for %{name}
 
 
 %changelog
+* Mon Jan 18 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.4-2
+- Fix Provides/Obsoletes of OpenEXR package.
+
 * Wed Jan 06 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.4-1
 - Update to 2.5.4.
 
