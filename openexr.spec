@@ -3,7 +3,7 @@
 
 Name:           openexr
 Version:        2.5.4
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -145,6 +145,9 @@ Summary:        Development files for %{name}
 
 
 %changelog
+* Fri Jan 22 2021 Jonathan Wakely <jwakely@redhat.com> - 2.5.4-3
+- Rebuilt for Boost 1.75
+
 * Mon Jan 18 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.4-2
 - Fix Provides/Obsoletes of OpenEXR package.
 
