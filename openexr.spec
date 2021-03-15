@@ -2,8 +2,8 @@
 %global sover 25
 
 Name:           openexr
-Version:        2.5.4
-Release:        4%{?dist}
+Version:        2.5.5
+Release:        1%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -145,6 +145,9 @@ Summary:        Development files for %{name}
 
 
 %changelog
+* Mon Mar 15 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.5-1
+- Update to 2.5.5.
+
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 2.5.4-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
