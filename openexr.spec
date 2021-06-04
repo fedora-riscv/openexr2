@@ -3,7 +3,7 @@
 
 Name:           openexr
 Version:        2.5.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -145,6 +145,9 @@ Summary:        Development files for %{name}
 
 
 %changelog
+* Fri Jun 04 2021 Python Maint <python-maint@redhat.com> - 2.5.5-2
+- Rebuilt for Python 3.10
+
 * Mon Mar 15 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.5-1
 - Update to 2.5.5.
 
