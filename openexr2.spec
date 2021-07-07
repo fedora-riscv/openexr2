@@ -4,7 +4,7 @@
 
 Name:           %{pkgname}
 Version:        2.5.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -98,16 +98,6 @@ Summary:        Development files for %{name}
 # Remove extraneous documentation since this is a compat package.
 rm -rf %{buildroot}%{_docdir}/OpenEXR/
 
-# Rename pkgconfig and cmake files to not conflict with the latest version.
-mv %{buildroot}%{_libdir}/pkgconfig/IlmBase.pc \
-   %{buildroot}%{_libdir}/pkgconfig/IlmBase2.pc
-mv %{buildroot}%{_libdir}/pkgconfig/OpenEXR.pc \
-   %{buildroot}%{_libdir}/pkgconfig/OpenEXR2.pc
-mv %{buildroot}%{_libdir}/cmake/IlmBase \
-   %{buildroot}%{_libdir}/cmake/IlmBase2
-mv %{buildroot}%{_libdir}/cmake/OpenEXR \
-   %{buildroot}%{_libdir}/cmake/OpenEXR2
-
 
 %check
 # Test 4 currently fails on aarch64 and sometimes times out on armv7hl
@@ -125,13 +115,16 @@ mv %{buildroot}%{_libdir}/cmake/OpenEXR \
 %files devel
 %{_includedir}/OpenEXR/
 %{_libdir}/*.so
-%{_libdir}/cmake/IlmBase2/
-%{_libdir}/pkgconfig/IlmBase2.pc
-%{_libdir}/cmake/OpenEXR2/
-%{_libdir}/pkgconfig/OpenEXR2.pc
+%{_libdir}/cmake/IlmBase/
+%{_libdir}/pkgconfig/IlmBase.pc
+%{_libdir}/cmake/OpenEXR/
+%{_libdir}/pkgconfig/OpenEXR.pc
 
 
 %changelog
+* Wed Jul 07 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.5-3
+- Undo rename of cmake and pkgconfig files and use version requirements instead.
+
 * Wed Jul 07 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.5-2
 - Rename pkgconfig and cmake files to not conflict.
 
