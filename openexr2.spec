@@ -4,7 +4,7 @@
 
 Name:           %{pkgname}
 Version:        2.5.5
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -122,6 +122,9 @@ rm -rf %{buildroot}%{_docdir}/OpenEXR/
 
 
 %changelog
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 2.5.5-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Wed Jul 07 2021 Richard Shaw <hobbes1069@gmail.com> - 2.5.5-3
 - Undo rename of cmake and pkgconfig files and use version requirements instead.
 
