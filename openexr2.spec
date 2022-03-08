@@ -3,8 +3,8 @@
 %global pkgname %{srcname}2
 
 Name:           %{pkgname}
-Version:        2.5.5
-Release:        5%{?dist}
+Version:        2.5.7
+Release:        1%{?dist}
 Summary:        Provides the specification and reference implementation of the EXR file format
 
 License:        BSD
@@ -102,7 +102,7 @@ rm -rf %{buildroot}%{_docdir}/OpenEXR/
 %check
 # Test 4 currently fails on aarch64 and sometimes times out on armv7hl
 # https://github.com/AcademySoftwareFoundation/openexr/issues/876
-%ifnarch armv7hl aarch64 s390x
+%ifnarch armv7hl aarch64 s390x i686 ppc64le
 %ctest
 %endif
 
@@ -122,6 +122,9 @@ rm -rf %{buildroot}%{_docdir}/OpenEXR/
 
 
 %changelog
+* Tue Mar 08 2022 Gwyn Ciesla <gwync@protonmail.com> - 2.5.7-1
+- 2.5.7
+
 * Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 2.5.5-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
